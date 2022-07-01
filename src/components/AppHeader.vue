@@ -20,8 +20,13 @@ export default {
         {title: 'Slider', to: '/slider'},
         {title: 'Calculator', to: '/calculator'},
         {title: 'ReuseableModal', to: '/reuseable-modal'},
-      ]
-
+      ],
+    
+    }
+  },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.isLoggedIn
     }
   },
   methods: {

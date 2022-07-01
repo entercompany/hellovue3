@@ -4,12 +4,19 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
-      count: 0
+      isLoggedIn: false,
+      authUser: {}
     }
   },
   mutations: {
-    increment (state) {
-      state.count++
+    // increment (state) {
+    //   // state.count++
+    // }
+    setIsLoggedIn(state, payload){
+      state.isLoggedIn  = payload
+    },
+    setAuthUser(state, payload){
+      state.authUser =  payload
     }
   }
 })

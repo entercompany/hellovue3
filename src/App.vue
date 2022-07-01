@@ -22,12 +22,15 @@ export default {
   mounted() {
     authService.onAuthStateChanged((user)=> {
       if(user){
-        this.isLoggedIn = true
-        this.authUser = user
+        this.$store.commit('setIsLoggedIn', true)
+        // this.isLoggedIn = true
+        this.$store.commit('setAuthUser', user)
+        // this.authUser = user
         console.log(user)
       }else{
-       this.isLoggedIn = false
-       this.authUser = {}
+        this.$store.commit('setIsLoggedIn', false)
+        // this.isLoggedIn = true
+        this.$store.commit('setAuthUser', {})
         console.log('No user')
       }
     })
@@ -35,8 +38,8 @@ export default {
   data() {
     return {
       isLoginOpen: false,
-      isLoggedIn : false,
-      authUser : {},
+      // isLoggedIn : false,
+      // authUser : {},
     }
   }
 }

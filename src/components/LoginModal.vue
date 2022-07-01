@@ -42,7 +42,7 @@ export default {
   data(){
     return {
       
-        email: 'jspark300@gmail.com',
+        email: 'user1@gmail.com',
         password: 'password',
       isLoading : false,
     }
